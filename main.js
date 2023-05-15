@@ -1,6 +1,6 @@
 class TreeStore {
 	constructor(items) {
-		const preparedItems = items.map(item => {
+		const preparedItems = items.map((item) => {
 			return [item.id, item];
 		});
 
@@ -9,6 +9,10 @@ class TreeStore {
 
 	getAll() {
 		return Array.from(this.items.values());
+	}
+
+	getItem(id) {
+		return this.items.get(id);
 	}
 }
 
@@ -27,4 +31,6 @@ const items = [
 
 const ts = new TreeStore(items);
 
-console.log(ts.getAll());
+console.log(ts.getAll(), '\n');
+
+console.log(ts.getItem(7), '\n'); // {"id":7,"parent":4,"type":null}
