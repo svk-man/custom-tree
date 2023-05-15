@@ -1,4 +1,12 @@
-class TreeStore {}
+class TreeStore {
+	constructor(items) {
+		const preparedItems = items.map(item => {
+			return [item.id, item];
+		});
+
+		this.items = new Map(preparedItems);
+	}
+}
 
 const items = [
 	{ id: 1, parent: "root" },
