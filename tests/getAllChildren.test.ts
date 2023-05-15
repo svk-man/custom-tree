@@ -1,12 +1,9 @@
-const initTreeStore = require("./initTreeStore");
+import { initTreeStore } from "./initTreeStore";
 
-test("get all items", () => {
+test("get all children for item with id 2", () => {
 	const ts = initTreeStore();
 
-	expect(ts.getAll()).toStrictEqual([
-		{ id: 1, parent: "root" },
-		{ id: 2, parent: 1, type: "test" },
-		{ id: 3, parent: 1, type: "test" },
+	expect(ts.getAllChildren(2)).toStrictEqual([
 		{ id: 4, parent: 2, type: "test" },
 		{ id: 5, parent: 2, type: "test" },
 		{ id: 6, parent: 2, type: "test" },

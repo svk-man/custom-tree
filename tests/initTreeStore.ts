@@ -1,6 +1,6 @@
-const TreeStore = require("../lib/TreeStore");
+import { TreeStore } from "../lib/TreeStore";
 
-function initTreeStore() {
+export function initTreeStore() {
 	const items = [
 		{ id: 1, parent: "root" },
 		{ id: 2, parent: 1, type: "test" },
@@ -16,5 +16,3 @@ function initTreeStore() {
 
 	return new TreeStore(items);
 }
-
-module.exports = initTreeStore;

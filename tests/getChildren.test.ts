@@ -1,4 +1,4 @@
-const initTreeStore = require("./initTreeStore");
+import { initTreeStore } from "./initTreeStore";
 
 test("get children for item with id 4", () => {
 	const ts = initTreeStore();

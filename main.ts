@@ -1,6 +1,6 @@
-const TreeStore = require("./lib/TreeStore");
+import { TreeStore, TreeStoreItem } from "./lib/TreeStore";
 
-const items = [
+const items: Array<TreeStoreItem> = [
 	{ id: 1, parent: "root" },
 	{ id: 2, parent: 1, type: "test" },
 	{ id: 3, parent: 1, type: "test" },
