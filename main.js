@@ -6,6 +6,10 @@ class TreeStore {
 
 		this.items = new Map(preparedItems);
 	}
+
+	getAll() {
+		return Array.from(this.items.values());
+	}
 }
 
 const items = [
@@ -22,3 +26,5 @@ const items = [
 ];
 
 const ts = new TreeStore(items);
+
+console.log(ts.getAll());
